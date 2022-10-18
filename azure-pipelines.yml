@@ -7,20 +7,9 @@ trigger:
 - master
 
 pool:
-<<<<<<< HEAD
   vmImage: 'ubuntu-latest'
 
 steps:
-=======
-  name: 'MyAgentSelfHosted'
-  vmImage: 'demoselfhostedagent'
-
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: 
->>>>>>> db2775719447163e85d06f56cf1a15ac3737057d
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
@@ -34,10 +23,7 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
-<<<<<<< HEAD
 
-=======
->>>>>>> db2775719447163e85d06f56cf1a15ac3737057d
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
