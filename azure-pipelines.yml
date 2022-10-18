@@ -14,7 +14,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: '**/*.csproj'
+    projects: '**'
     arguments: '--output $(Build.BinariesDirectory)/publish_output --configuration Release'
 
 - task: ArchiveFiles@2
