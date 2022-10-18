@@ -7,7 +7,8 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: 'MyAgentSelfHosted'
+  vmImage: 'demoselfhostedagent'
 
 steps:
 - task: DotNetCoreCLI@2
